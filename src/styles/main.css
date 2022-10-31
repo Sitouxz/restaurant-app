@@ -1,0 +1,472 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background-color: #ffcc00;
+  color: white;
+  padding: 8px;
+  z-index: 1000;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+nav {
+  background: #fff;
+  height: 80px;
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 100px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 5px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #ffcc00;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 12px 15px;
+  transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+  background: #ffcc00;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.brand {
+  text-decoration: none;
+  font-size: 35px;
+  font-weight: 700;
+  color: #ffcc00;
+  font-family: 'Lobster', cursive;
+}
+
+.dropdown-button {
+  display: none;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+  color: #ffcc00;
+  padding: 12px 15px;
+  transition: all 0.3s ease;
+}
+
+.dropdown-button:hover {
+  background: #ffcc00;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.dropdown-button:focus {
+  outline: none;
+}
+
+.hero {
+  background: url('../public/images/heros/hero-large.jpg') no-repeat center
+    center/cover;
+  height: 100vh;
+  width: 100%;
+  padding: 0 80px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.hero h1 {
+  font-size: 60px;
+  line-height: 1;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 24px;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.hero a {
+  text-decoration: none;
+  color: #ffcc00;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border: 2px solid #ffcc00;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.hero a:hover {
+  background: #ffcc00;
+  color: #fff;
+}
+
+@media only screen and (max-width: 768px) {
+  .hero {
+    padding: 0 50px;
+    background: url('../public/images/heros/hero-small.jpg') no-repeat center;
+  }
+}
+
+.restaurant {
+  padding: 20px 0;
+  background-color: rgb(236, 236, 236);
+}
+
+.restaurant h2 {
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.restaurant p {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  margin-left: 5px;
+  margin-right: 5px;
+  text-align: center;
+}
+
+.restaurant-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  padding: 20px 80px;
+}
+
+.restaurant-list .restaurant-item {
+  background: #fff;
+
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.restaurant-list .restaurant-item:hover {
+  transform: translateY(-5px);
+}
+
+.restaurant-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.restaurant-item a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.restaurant-item .restaurant-content {
+  padding: 10px 20px 20px 20px;
+}
+
+.restaurant-item .restaurant-content h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #ffcc00;
+}
+
+.restaurant-item .restaurant-content h3 span {
+  font-size: 16px;
+  font-weight: 400;
+  color: #000;
+  margin-left: 5px;
+}
+
+.restaurant-item .restaurant-content p {
+  font-size: 16px;
+  text-align: left;
+}
+
+.restaurant-header {
+  position: relative;
+}
+
+.restaurant-rating {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 9;
+  background: #ffcc00;
+  color: #fff;
+  padding: 5px 10px;
+  height: 36px;
+  border-radius: 5px;
+}
+
+.restaurant-description {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+footer {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.restaurant-detail {
+  margin-top: 80px;
+  padding: 20px 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.restaurant-detail a {
+  padding: 10px 0;
+  text-decoration: none;
+  color: black;
+}
+
+.restaurant-detail .restaurant-poster {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.restaurant-detail .restaurant-content {
+  margin-top: 20px;
+}
+
+.restaurant-detail .restaurant-content h2 {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-align: start;
+  color: #e6b800;
+}
+
+.restaurant-detail .restaurant-info {
+  padding: 12px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.restaurant-detail .restaurant-info h4 {
+  font-size: 20px;
+  font-weight: 700;
+  text-align: start;
+  color: #e6b800;
+}
+
+.restaurant-detail .restaurant-content p {
+  font-size: 18px;
+  font-weight: 500;
+  text-align: start;
+}
+
+.restaurant-detail .restaurant-review {
+  margin-top: 20px;
+}
+
+.restaurant-detail .review-item {
+  padding: 12px;
+  background-color: white;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.restaurant-detail .review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.like {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #db0000;
+
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  border-radius: 50%;
+  border: 0;
+
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+}
+
+.review-form {
+  padding: 0 30vh;
+  background-color: rgb(236, 236, 236);
+  text-align: center;
+}
+
+.form-input {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-input input,
+.form-input textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+.form-submit {
+  background-color: #ffcc00;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fbfbfb;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 1200px) {
+  .restaurant-list {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 20px 50px;
+  }
+
+  .restaurant-detail {
+    padding: 20px 20vh;
+  }
+  .review-form {
+    padding: 0 20vh;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .restaurant-list {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px 30px;
+  }
+
+  .restaurant-detail {
+    padding: 20px 10vh;
+  }
+  .review-form {
+    padding: 0 10vh;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  nav {
+    padding: 0 50px;
+  }
+
+  nav ul {
+    position: fixed;
+    width: 100%;
+    background: #fff;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: all 0.3s ease;
+  }
+  nav ul li {
+    padding: 12px 0;
+    margin: 0;
+  }
+
+  nav ul li:hover {
+    background: #e6b800;
+    transition: all 0.3s ease;
+  }
+
+  nav ul li a {
+    font-size: 22px;
+    color: white;
+  }
+
+  nav ul li a:hover {
+    background: none;
+  }
+
+  .show {
+    left: 0;
+  }
+
+  .dropdown-button {
+    display: block;
+  }
+  .dropdown-content {
+    background-color: #ffcc00;
+  }
+
+  .restaurant-list {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 20px 50px;
+  }
+
+  .restaurant-item {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .restaurant-detail {
+    padding: 20px 1vh;
+  }
+  .review-form {
+    padding: 0 1vh;
+  }
+}
