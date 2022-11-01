@@ -7,7 +7,7 @@ const createRestaurantItemTemplate = (restaurant) => `
   <a href="#/restaurant/${restaurant.id}">
     <div class="restaurant-header">
       <img
-        src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}"
+        data-src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}"
         alt="${restaurant.name}"
         class="restaurant-poster lazyload"
       />
