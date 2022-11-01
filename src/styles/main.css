@@ -135,7 +135,8 @@ nav ul li a:hover {
 @media only screen and (max-width: 768px) {
   .hero {
     padding: 0 50px;
-    background: url('../public/images/heros/hero-small.jpg') no-repeat center;
+    background: url('../public/images/heros/hero-small.jpg') no-repeat
+      center/cover;
   }
 }
 
@@ -393,6 +394,10 @@ footer {
 }
 
 @media only screen and (max-width: 992px) {
+  .hero {
+    background: url('../public/images/heros/hero-small.jpg') no-repeat
+      center/cover;
+  }
   .restaurant-list {
     grid-template-columns: repeat(2, 1fr);
     padding: 20px 30px;
